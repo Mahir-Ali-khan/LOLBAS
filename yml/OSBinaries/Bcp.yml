@@ -28,7 +28,6 @@ Detection:
   - IOC: Network connections from bcp.exe to SQL Server followed by file creation
   - IOC: Event ID 4688 - Process creation for bcp.exe
   - IOC: Event ID 4663 - File system access by bcp.exe
-  - Analysis: Monitor for bcp.exe creating files with executable extensions
   - Sigma: https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bcp_export_data.yml
 Resources:
   - Link: https://docs.microsoft.com/en-us/sql/tools/bcp-utility
