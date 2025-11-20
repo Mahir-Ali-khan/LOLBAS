@@ -1,3 +1,4 @@
+---
 Name: Bcp.exe
 Description: Microsoft SQL Server Bulk Copy Program utility for importing and exporting data between SQL Server instances and data files. Can be abused to stage and deliver malicious payloads by storing them in databases and extracting to the file system.
 Author: Mahir Ali Khan
@@ -30,13 +31,13 @@ Detection:
   - Analysis: Monitor for bcp.exe creating files with executable extensions (.exe, .dll, .bat, .ps1)
   - Sigma: https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bcp_export_data.yml
 Resources:
-- Link: https://docs.microsoft.com/en-us/sql/tools/bcp-utility
-- Link: https://asec.ahnlab.com/en/61000/
-- Link: https://asec.ahnlab.com/en/78944/
-- Link: https://www.huntress.com/blog/attacking-mssql-servers
-- Link: https://www.huntress.com/blog/attacking-mssql-servers-pt-ii
-- Link: https://news.sophos.com/en-us/2024/08/07/sophos-mdr-hunt-tracks-mimic-ransomware-campaign-against-organizations-in-india/
-- Link: https://research.nccgroup.com/2018/03/10/apt15-is-alive-and-strong-an-analysis-of-royalcli-and-royaldns/
+  - Link: https://docs.microsoft.com/en-us/sql/tools/bcp-utility
+  - Link: https://asec.ahnlab.com/en/61000/
+  - Link: https://asec.ahnlab.com/en/78944/
+  - Link: https://www.huntress.com/blog/attacking-mssql-servers
+  - Link: https://www.huntress.com/blog/attacking-mssql-servers-pt-ii
+  - Link: https://news.sophos.com/en-us/2024/08/07/sophos-mdr-hunt-tracks-mimic-ransomware-campaign-against-organizations-in-india/
+  - Link: https://research.nccgroup.com/2018/03/10/apt15-is-alive-and-strong-an-analysis-of-royalcli-and-royaldns/
 Acknowledgement:
   - Person: Mahir Ali Khan
     Handle: '@in/mahiralikhan07'
