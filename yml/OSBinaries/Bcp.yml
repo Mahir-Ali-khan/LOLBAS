@@ -2,7 +2,7 @@
 Name: Bcp.exe
 Description: Microsoft SQL Server Bulk Copy Program utility for importing and exporting data between SQL Server instances and data files. Can be abused to stage and deliver malicious payloads by storing them in databases and extracting to the file system.
 Author: Mahir Ali Khan
-Created: 13-11-2025
+Created: 2025-11-13
 Commands:
   - Command: bcp "SELECT payload_data FROM database.dbo.payloads WHERE id=1" queryout "C:\Windows\Temp\payload.exe" -S localhost -T -c
     Description: Export binary payload stored in SQL Server database to file system
@@ -28,7 +28,7 @@ Detection:
   - IOC: Network connections from bcp.exe to SQL Server followed by file creation
   - IOC: Event ID 4688 - Process creation for bcp.exe
   - IOC: Event ID 4663 - File system access by bcp.exe
-  - Analysis: Monitor for bcp.exe creating files with executable extensions (.exe, .dll, .bat, .ps1)
+  - Analysis: Monitor for bcp.exe creating files with executable extensions
   - Sigma: https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_bcp_export_data.yml
 Resources:
   - Link: https://docs.microsoft.com/en-us/sql/tools/bcp-utility
@@ -40,4 +40,4 @@ Resources:
   - Link: https://research.nccgroup.com/2018/03/10/apt15-is-alive-and-strong-an-analysis-of-royalcli-and-royaldns/
 Acknowledgement:
   - Person: Mahir Ali Khan
-    Handle: '@in/mahiralikhan07'
+    Handle: '@mahiralikhan07'
